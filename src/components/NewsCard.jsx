@@ -9,13 +9,15 @@ export default function NewsCard({
 }) {
   return (
     <div className="flex max-md:flex-col justify-center items-center  gap-6 bg-white p-4 rounded-lg shadow-md">
-      <div className=" md:max-w-48  object-cover">
-        <img
-          src={urlToImage}
-          className=" w-[100%] h-[100%] rounded-lg content-stretch"
-          alt=""
-        />
-      </div>
+      <div
+        className=" w-[500px] h-[100%] "
+        style={{
+          backgroundImage: `url(${urlToImage})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      ></div>
 
       <div className="flex flex-col gap-2">
         <p className="topic-headline text-purple-600">Technology</p>

@@ -10,6 +10,7 @@ import useNewsData from "../hooks/useNewsData";
 
 export default function TechReview() {
   const newsData = useNewsData("politics", 0, 3);
+  console.log("poli", newsData);
   return (
     <section className="max-container">
       <div className="flex max-md:flex-col lg:flex-1 gap-6 max-sm:items-center justify-center">

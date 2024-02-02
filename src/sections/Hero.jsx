@@ -63,7 +63,7 @@ export default function Hero() {
             {apps.map((news) => (
               <div key={news.topic} className="border-purple-400 ">
                 <h1 className="topic-headline">{news.topic}</h1>
-                <p className="info-text">{news.desc}</p>
+                <p className="info-text">{news.desc}..</p>
               </div>
             ))}
           </div>
