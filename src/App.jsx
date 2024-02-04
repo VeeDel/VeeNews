@@ -38,6 +38,7 @@ export default function App() {
       <section className="padding">
         <Games />
       </section>
+      <section className="padding"></section>
       <section></section>
       <Footer />
     </main>
