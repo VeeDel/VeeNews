@@ -17,6 +17,7 @@ export default function TechReview() {
         <div>
           <Headlins Headline={"Politics"} ViewMore={"More In Tech Review"} />
           <div className="grid grid-cols-1 gap-6">
+            <input type="text" />
             {newsData.slice(1, 4).map((item) => (
               <NewsCard {...item} key={item.label} />
             ))}
