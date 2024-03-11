@@ -1,3 +1,5 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Apps from "./sections/Apps";
 import EditorsPick from "./sections/EditorsPick";
@@ -7,13 +9,26 @@ import MustRead from "./sections/MustRead";
 import TechReview from "./sections/TechReview";
 import Footer from "./sections/Footer";
 import Technology from "./sections/Technology";
-import Games from "./sections/games";
-import Subscribe from "./components/Subscribe";
+import Games from "./sections/Games";
+import { MoreNews } from "./pages/MoreNews";
 
 export default function App() {
   return (
-    <main className="relative">
-      <Nav />
+    <Router>
+      <main className="relative">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/morenews" element={<MoreNews />} />
+        </Routes>
+      </main>
+    </Router>
+  );
+}
+
+function Home() {
+  return (
+    <>
       <section className="relative xl:padding-l wide:padding-r">
         <Hero />
       </section>
@@ -41,6 +56,6 @@ export default function App() {
       <section className="padding"></section>
       <section></section>
       <Footer />
-    </main>
+    </>
   );
 }

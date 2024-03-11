@@ -14,7 +14,11 @@ export default function EditorsPick() {
     <section className="max-container">
       <div className="flex max-sm:flex-col gap-5">
         <div className="flex-1 border-b-2 pb-10 ">
-          <Headlins Headline={"Editors Pick"} ViewMore={"View all"} />
+          <Headlins
+            Headline={"Editors Pick"}
+            ViewMore={"View all"}
+            topic={"technology"}
+          />
           <div className="flex max-sm:flex-col mt-4 justify-between gap-4 ">
             {newsData.map((pick) => (
               <div
